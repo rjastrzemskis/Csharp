@@ -15,20 +15,21 @@ namespace Tax_11
         {
             string product = "learning C sharp";
             var price = 19.99;
-            var salesTax = CalculateSalesTax(price);
+            var tax = 0.2;
+            var salesTax = CalculateSalesTax(price, tax);
 
             Console.WriteLine("Product: " + product);
             Console.WriteLine("Price: £" + price);
-            Console.WriteLine("Sales tax: £" + salesTax);
-            Console.WriteLine("Total: £" + (price + salesTax));
+            Console.WriteLine("Sales tax: £" + salesTax.ToString("N2"));
+            Console.WriteLine("Total: £" + (price + salesTax).ToString("N2"));
             Console.ReadKey();
 
         }
 
         //change only this method accordingly.
-        static double CalculateSalesTax(double price)
+        static double CalculateSalesTax(double price, double tax)
         {
-            return price;
+            return price * tax;
         }
     }
 }
