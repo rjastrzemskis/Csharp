@@ -2,14 +2,6 @@
 
 namespace FormatCurrency_12
 {
-    /**
-     * Currency Formatting
-     *
-     * The business has informed you that prices must have 2 decimal places
-     * They must also start with the currency symbol
-     * Write a function that transforms numbers into the format £0.00
-     */
-
     class Program
     {
         static void Main(string[] args)
@@ -25,10 +17,9 @@ namespace FormatCurrency_12
             Console.ReadKey();
         }
 
-        //change FormatCurrency method accordingly.
         static string FormatCurrency(double price)
         {
-            return string.Empty;
+            return price.ToString("F2");
         }
 
         static double CalculateSalesTax(double price)
