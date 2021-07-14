@@ -6,15 +6,18 @@ namespace SumAverageRunningInt
     {
         static void Main(string[] args)
         {
-            var sum = 0;
-            int average;
-            const int lowerBound = 1;
-            const int upperBound = 100;
+            int sum = 0;
+            int lowerBound = 1;
+            int upperBound = 100;
 
-            for (var number = lowerBound; number <= upperBound; ++number) 
-            {
+            for (int number = lowerBound; number <= upperBound; ++number)
                 sum += number;
-            }
+
+            double average = (double)sum / upperBound;
+
+            Console.WriteLine("The sum of " + lowerBound + " to " + upperBound + " is " + sum);
+            Console.WriteLine("The average is " + average);
+            Console.ReadKey();
         }
     }
 }
