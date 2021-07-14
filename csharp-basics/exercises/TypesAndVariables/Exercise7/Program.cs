@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise7
 {
@@ -10,6 +6,20 @@ namespace Exercise7
     {
         static void Main(string[] args)
         {
+            int count = 0;
+            Console.WriteLine("Enter words with some uppercase: ");
+            string str = Console.ReadLine();
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                char ch = str[i];
+                if (ch >= 'A' && ch <= 'Z')
+                    count++;
+            }
+
+            Console.WriteLine("There are " + count + " uppercase letters.");
+            Console.ReadKey();
         }
+
     }
 }
