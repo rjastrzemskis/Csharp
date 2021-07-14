@@ -19,8 +19,11 @@ namespace ConvertCurrency_14
 
             var product = "learning C sharp";
             var price = 12.5;
-            var priceInUSD = ConvertToUSD(price);
-            var priceInBRL = ConvertToBRL(price);
+            var fee = 1.01;
+            var echtousd = 1.4;
+            var echtobrl = 5.6;
+            var priceInUSD = ConvertToUSD(price, echtobrl, fee);
+            var priceInBRL = ConvertToBRL(price, echtousd, fee);
 
             Console.WriteLine("Product: " + product);
             Console.WriteLine("Price in USD: " + priceInUSD);
@@ -28,16 +31,17 @@ namespace ConvertCurrency_14
             Console.ReadKey();
         }
 
+
         //change this method accordingly
-        static double ConvertToUSD(double price)
+        static string ConvertToUSD(double price, double echtobrl, double fee)
         {
-            return price;
+            return (price * echtobrl * fee).ToString("N2");
         }
 
         //change this method accordingly
-        static double ConvertToBRL(double price)
+        static string ConvertToBRL(double price, double echtousd, double fee)
         {
-            return price;
+            return (price * echtousd * fee).ToString("N2");
         }
     }
 }
