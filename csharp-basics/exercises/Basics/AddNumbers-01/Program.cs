@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System;
 
-namespace AddNumbers_01
+namespace AddNumbers
 {
     class Program
     {
-        //Fix the syntax errors
+        //todo: fix the syntax errors
         static void Main(string[] args)
         {
-            Console.WriteLine(AddNumbers(1, 1, 3)); //Expected 5
+            Console.WriteLine(AddNumbers(5, 5, 8)); //Expected result 18;
             Console.ReadKey();
         }
 
-        static int AddNumbers(int a int b int c)
-            return a + b + c
+        static int AddNumbers(int a, int b, int c)
+        {
+            return a + b + c;
+        }
     }
 }

@@ -14,18 +14,18 @@ namespace ConvertCurrency_13
         {
             var product = "learning C sharp";
             var price = 19.99;
-            var priceInUSD = ConvertToUSD(price);
+            var exchtoUSD = 1.4;
+            var priceInUSD = ConvertToUSD(price, exchtoUSD);
 
             Console.WriteLine("Product: " + product);
             Console.WriteLine("Price in USD: " + priceInUSD);
             Console.ReadKey();
         }
 
-
         //change this method accordingly
-        static double ConvertToUSD(double price)
+        static string ConvertToUSD(double price, double exchtoUSD)
         {
-            return price;
+            return (price * exchtoUSD).ToString("N2");
         }
     }
 }
