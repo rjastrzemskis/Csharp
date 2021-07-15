@@ -12,6 +12,7 @@ namespace Exercise5
             PhoneKeyPadSwitchCase(letter);
             Console.ReadKey();
         }
+        
         static void PhoneKeyPadNested(char letter)
         {
             int digit = 0;
@@ -37,6 +38,7 @@ namespace Exercise5
             }
             else Console.WriteLine("It is not a letter!");
         }
+        
         static void PhoneKeyPadSwitchCase(char letter)
         {
             int digit = 0;
