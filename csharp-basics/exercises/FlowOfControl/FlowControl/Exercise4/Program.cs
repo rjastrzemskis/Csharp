@@ -12,6 +12,7 @@ namespace Exercise4
             PrintDayInWordSwitchCase(dayNumber);
             Console.ReadKey();
         }
+        
         static void PrintDayInWordNested(int dayNumber)
         {
             string dayWord;
@@ -33,6 +34,7 @@ namespace Exercise4
                 dayWord = "not a valid day";
             Console.WriteLine("Entered number is " + dayWord + " with nested approach.");
         }
+        
         static void PrintDayInWordSwitchCase(int dayNumber)
         {
             string dayWord;
