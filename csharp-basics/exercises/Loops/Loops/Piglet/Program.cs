@@ -58,7 +58,7 @@ namespace Test
             {
                 randomNumber = random.Next(1, 6);
                 randomNumber1 = random.Next(1, 6);
-                
+
                 int sum = randomNumber + randomNumber1;
                 Console.WriteLine($"{randomNumber} and {randomNumber1} = {sum} ");
             }
