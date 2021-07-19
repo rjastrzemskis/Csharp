@@ -43,21 +43,13 @@ namespace TicTacToe
             Console.Write("Player " + player + " , choose your location on column from 0-2: ");
             int column = Convert.ToInt32(Console.ReadLine());
 
-            char moveCheck = board[row, column];
             for (int r = row; r <= row; r++)
             {
                 for (int c = column; c <= column; c++)
-                    if (moveCheck == board[r, c] && board[r, c] == ' ')
+                    if (board[r, c] == ' ')
                     {
                         board[r, c] = player;
-                        if (player == 'X')
-                        {
-                            player = 'O';
-                        }
-                        else if (player == 'O')
-                        {
-                            player = 'X';
-                        }
+                        player = player == 'X' ? 'O' : 'X';
                     }
             }
 
