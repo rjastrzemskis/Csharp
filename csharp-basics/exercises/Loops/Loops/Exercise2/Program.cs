@@ -6,32 +6,24 @@ namespace Exercise2
     {
         static void Main(string[] args)
         {
-            int i, n;
-            
-            Console.WriteLine("Input number of terms : ");
+            Console.Write("Input number of terms : ");
+            int n = Convert.ToInt32(Console.ReadLine());
 
-            n = Convert.ToInt32(Console.ReadLine());
-            /*
-            todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
-            */
-            for (i = 0; i < n; i++)
+            double sum = 1;
+            if (n > 0)
             {
-                Console.WriteLine(Pow(i,n));
+                for (int i = 0; i < n; i++)
+                    sum *= n;
             }
+            else if (n < 0)
+            {
+                for (int i = -1; i >= n; --i)
+                    sum /= n;
+            }
+            else sum = 1;
 
+            Console.WriteLine(sum);
             Console.ReadKey();
-
-        }
-
-        static int Pow(int number, int times)
-        {
-            var a = number;
-            for (var i = times; i > 1; i--)
-            {
-                a *= number;
-            }
-
-            return a;
         }
     }
 }
