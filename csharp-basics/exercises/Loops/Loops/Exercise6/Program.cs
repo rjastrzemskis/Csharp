@@ -18,6 +18,7 @@ namespace Exercise6
                 else if (i % 5 == 0)
                     Console.Write("Buzz ");
                 else Console.Write(i + " ");
+                
                 if (i % 20 == 0)
                     Console.WriteLine();
             }
