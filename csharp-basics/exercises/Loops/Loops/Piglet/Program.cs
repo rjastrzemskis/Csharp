@@ -16,7 +16,6 @@ namespace Piglet
             {
                     Random random = new Random();
                     int randomNumber = random.Next(1, 6);
-
                     if (randomNumber == 1)
                     {
                         Console.WriteLine("You rolled a 1! You got 0 points. The game is over");
