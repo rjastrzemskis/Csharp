@@ -9,8 +9,8 @@ namespace Account
             //Your first account
             Account testAccount = new Account("Barto's account", 100.00);
             Console.WriteLine(testAccount);
-            testAccount.deposit(20);
-            Console.WriteLine("Barto's account balance is now: " + testAccount.balance() + "\n");
+            testAccount.Deposit(20);
+            Console.WriteLine("Barto's account balance is now: " + testAccount.Balance() + "\n");
 
             //Your first money transfer
             Account mattsAccount = new Account("Matt's account", 1000);
@@ -19,10 +19,10 @@ namespace Account
             Console.WriteLine(mattsAccount);
             Console.WriteLine(myAccount);
 
-            mattsAccount.withdrawal(100.0);
-            Console.WriteLine("Matt's account balance is now: " + mattsAccount.balance());
-            myAccount.deposit(100.0);
-            Console.WriteLine("My account balance is now: " + myAccount.balance() + "\n");
+            mattsAccount.Withdrawal(100.0);
+            Console.WriteLine("Matt's account balance is now: " + mattsAccount.Balance());
+            myAccount.Deposit(100.0);
+            Console.WriteLine("My account balance is now: " + myAccount.Balance() + "\n");
 
             //Money transfer
             Account aAccount = new Account("A", 100.00);
@@ -45,7 +45,7 @@ namespace Account
 
         public static void Transfer(Account from, Account to, double howMuch)
         {
-            to.deposit(from.withdrawal(howMuch));
+            to.Deposit(from.withdrawal(howMuch));
         }
     }
 }
