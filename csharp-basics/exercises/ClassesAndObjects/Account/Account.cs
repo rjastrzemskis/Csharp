@@ -5,22 +5,24 @@
         private string _name;
         private double _money;
 
-        public Account(string v1, double v2)
+        public Account(string name, double balance)
         {
-            
+            _name = name;
+            _money = balance;
         }
 
-        public double withdrawal(double i)
+        public double Withdrawal(double i)
         {
+            _money -= i;
             return i;
         }
 
-        public void deposit(double i)
+        public double Deposit(double i)
         {
-            
+            return _money += i;
         }
 
-        public double balance()
+        public double Balance()
         {
             return _money;
         }

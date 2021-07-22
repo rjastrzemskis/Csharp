@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VideoStore
 {
@@ -52,7 +48,7 @@ namespace VideoStore
 
         private static void FillVideoStore()
         {
-            for (var i = 0; i < _countOfMovies; i++)
+            for (int i = 0; i < _countOfMovies; i++)
             {
                 Console.WriteLine("Enter movie name");
                 string movieName = Console.ReadLine();
