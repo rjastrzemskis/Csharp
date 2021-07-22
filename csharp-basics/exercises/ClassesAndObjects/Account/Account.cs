@@ -11,18 +11,18 @@
             _money = balance;
         }
 
-        public double withdrawal(double i)
+        public double Withdrawal(double i)
         {
             _money -= i;
             return i;
         }
 
-        public double deposit(double i)
+        public double Deposit(double i)
         {
             return _money += i;
         }
 
-        public double balance()
+        public double Balance()
         {
             return _money;
         }
