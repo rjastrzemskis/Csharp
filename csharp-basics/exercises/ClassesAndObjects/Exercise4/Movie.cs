@@ -14,9 +14,9 @@ namespace Exercise4
             _studio = studio;
             _rating = rating;
         }
+        
         public Movie(string title, string studio)
         {
-
             _title = title;
             _studio = studio;
             _rating = "PG";
