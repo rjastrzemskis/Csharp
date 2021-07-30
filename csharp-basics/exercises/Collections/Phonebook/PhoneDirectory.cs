@@ -1,65 +1,52 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PhoneBook
 {
     public class PhoneDirectory
     {
-        private PhoneEntry[] _data;
-        private int _dataCount;
+        public Dictionary<string, string> phoneBook = new Dictionary<string, string>();
+        public string _name;
+        public string _number;
 
-        public PhoneDirectory() {
-            _data = new PhoneEntry[1];
-            _dataCount = 0;
-        }
-
-        private int Find(string name) {
-            for (var i = 0; i < _dataCount; i++) 
-            {
-                if (_data[i].name.Equals(name)) 
-                {
-                    return i;
-                }
-            }
-
-            return -1;
-        }
-
-        public string GetNumber(string name) 
+        public void GetNumber(string name)
         {
-            var position = Find(name);
-            if (position == -1) 
-            {
-                return null;
-            } 
-            else 
-            {
-                return _data[position].number;
-            }
+            _name = name;
+            if (phoneBook.ContainsKey(_name))
+                Console.WriteLine(_name + " number is " + phoneBook.FirstOrDefault(x => x.Key == _name).Value);
+            else Console.WriteLine("There is no contact with name " + _name);
         }
 
-        public void PutNumber(string name, string number) 
+        public void GetName(string number)
         {
-            if (name == null || number == null) 
-            {
-                throw new Exception("name and number cannot be null");
-            }
+            _number = number;
+            if (phoneBook.ContainsValue(_number))
+                Console.WriteLine(_number + " number is " + phoneBook.FirstOrDefault(x => x.Value == _number).Key);
+            else Console.WriteLine("There is no contact with number " + _number);
+        }
 
-            var i = Find(name);
-            if (i >= 0) 
-            {
-                _data[i].number = number;
-            }
-            else 
-            {
-                if (_dataCount == _data.Length) 
-                {
-                    Array.Resize(ref _data, (2 * _data.Length));
-                }
+        public void PutNumber(string name, string number)
+        {
+            _name = name;
+            _number = number;
+            if (_name == null || _number == null)
+                throw new Exception("Name and number cannot be null");
+            else if (phoneBook.ContainsValue(_number))
+                Console.WriteLine("You already have contact with this number");
+            else if (phoneBook.ContainsKey(_name))
+                Console.WriteLine("You already have contact with this name");
 
-                var newEntry = new PhoneEntry {name = name, number = number}; // Create a new pair.
-                _data[_dataCount] = newEntry;   // Add the new pair to the array.
-                _dataCount++;
-            }
+            phoneBook.Add(_name, _number);
+            Console.WriteLine("You have created new contact");
+        }
+
+        public void SortedDictionary()
+        {
+            Console.WriteLine("Sorted phonebook by alphabet");
+            Dictionary<string, string> sortedDictionary = phoneBook.OrderBy(key => key.Key).ToDictionary((keyItem) => keyItem.Key, (valueItem) => valueItem.Value);
+            sortedDictionary.ToList().ForEach(x => Console.WriteLine(x.Key + " = " + x.Value));
+
         }
     }
 }

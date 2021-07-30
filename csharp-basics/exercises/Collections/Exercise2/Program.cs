@@ -1,45 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Exercise2
+namespace Exercise3
 {
     class Program
     {
         private static void Main(string[] args)
         {
-            var mySet = new HashSet<string>();
-
-            //TODO: add 5 values to Set.
-            mySet.Add("Red");
-            mySet.Add("Black");
-            mySet.Add("Yellow");
-            //..
-
-            Console.WriteLine("Should have 5 elements: ");
-            Console.WriteLine(string.Join(",", mySet)); //Pay attention on order!
-
-            //TODO: iterate through all elements in set
-            /*
-            for (...) 
+            HashSet<string> uniqueNames = new HashSet<string>();
+            string userInput = "anything";
+            while (userInput != string.Empty)
             {
-                Console.WriteLine(element);
+                Console.Write("Enter name: ");
+                uniqueNames.Add(userInput = Console.ReadLine());
             }
-            */
 
-            //TODO: remove all values from set
-            Console.WriteLine("Is mySet empty: ");
-            Console.WriteLine(mySet.Count == 0);
-
-            //TODO: check if it is possible to add duplicated values
-            mySet.Add("Green");
-            mySet.Add("Orange");
-            mySet.Add("Green");
-            mySet.Add("Purple");
-
-            Console.WriteLine(string.Join(",", mySet));
+            Console.WriteLine("Unique name list contains: " + string.Join(" ", uniqueNames));
+            Console.ReadKey();
         }
     }
 }
