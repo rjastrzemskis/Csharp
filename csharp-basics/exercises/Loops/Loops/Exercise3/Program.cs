@@ -6,21 +6,25 @@ namespace Exercise3
     {
         static void Main(string[] args)
         {
-            int i, n;
+            int numberSize = 20;
+            int[] randomNumber = new int[numberSize];
+            Random rnd = new Random();
 
-            Console.WriteLine("Input number of terms : ");
-
-            n = Convert.ToInt32(Console.ReadLine());
-            /*
-            todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.Pow()
-            */
-            for (i = 0; i < n; i++)
+            for (int i = 0; i < numberSize; i++)
             {
-                //  Console.WriteLine(Pow(i,n));
+                randomNumber[i] = rnd.Next(0, 100);
             }
 
-            Console.ReadKey();
+            Console.Write("There are few integers given: ");
+            Console.WriteLine(string.Join(", ", randomNumber));
+            Console.Write("Enter number to know it's position: ");
+            int number = Convert.ToInt32(Console.ReadLine());
 
+            int numberFound = 0;
+            if (Array.IndexOf(randomNumber, number) != -1)
+                Console.WriteLine("Found " + number + " at position " + Array.IndexOf(randomNumber, number));
+            else Console.WriteLine(numberFound + " it is not in array!");
+            Console.ReadKey();
         }
     }
 }
