@@ -93,7 +93,7 @@ Think about the real world objects below, how you would design them?
 
 ## Exercise #1
 
-See [DragRace](./DragRace.)
+See [DragRace](./DragRace)
 
 ## Exercise #2
 
