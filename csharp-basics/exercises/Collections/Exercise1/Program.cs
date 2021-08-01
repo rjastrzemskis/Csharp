@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise1
 {
@@ -21,12 +19,22 @@ namespace Exercise1
         private static void Main(string[] args)
         {
             string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+            List<string> list = array.ToList();
+            Console.WriteLine("List : " + string.Join(", ", list));
 
-            //todo - replace array with an List and print out the results
+            HashSet<string> hashSet = array.ToHashSet();
+            Console.WriteLine("Hashset: " + string.Join(", ", hashSet));
 
-            //todo - replace array with a HashSet and print out the results
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
+            foreach (string brand in hashSet)
+            {
+                Console.Write("Enter " + brand + " origination : ");
+                string origination = Console.ReadLine();
+                dictionary.Add(brand, origination);
+            }
 
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            dictionary.ToList().ForEach(x => Console.WriteLine(x.Key + " -> " + x.Value));
+            Console.ReadKey();
         }
     }
 }
