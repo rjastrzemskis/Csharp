@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 
 namespace DragRace
 {
-    public class Lexus : Car , ModifiedCars
+    public class Mustang : Car , ModifiedCars
     {
         private int currentSpeed = 0;
 
@@ -11,27 +11,27 @@ namespace DragRace
             return GetType().Name;
         }
 
-        public void SpeedUp() 
-        {
-            currentSpeed+=12;
-        }
-
-        public void SlowDown() 
-        {
-            currentSpeed-=6;
-        }
-
-        public string ShowCurrentSpeed() 
-        {
-            return currentSpeed.ToString();
-        }
-
-        public void UseNitrousOxideEngine() 
+        public void SpeedUp()
         {
             currentSpeed+=16;
         }
 
-        public void StartEngine() 
+        public void SlowDown()
+        {
+            currentSpeed-=8;
+        }
+
+        public string ShowCurrentSpeed()
+        {
+            return currentSpeed.ToString();
+        }
+
+        public void UseNitrousOxideEngine()
+        {
+            currentSpeed += 20;
+        }
+
+        public void StartEngine()
         {
             Console.WriteLine("Rrrrrrr.....");
         }
