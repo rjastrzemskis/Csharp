@@ -9,9 +9,9 @@ namespace Exercise8
             int maxEmployee = 3;
             for (int employee = 1; employee <= maxEmployee; employee++)
             {
-                Console.WriteLine("Enter " + employee + " employee base pay: ");
+                Console.Write("Enter " + employee + " employee base pay: ");
                 double basePay = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Enter " + employee + " employee worked hours: ");
+                Console.Write("Enter " + employee + " employee worked hours: ");
                 int hoursWorked = Convert.ToInt32(Console.ReadLine());
 
                 double neededHours = 40;
