@@ -10,13 +10,8 @@ namespace Exercise1
             int x = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter second digit: ");
             int y = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(Numbers(x, y));
+            Console.WriteLine(IntegerCheck.Numbers(x, y));
             Console.ReadKey();
-        }
-
-        private static bool Numbers(int x, int y)
-        {
-            return (x == 15 || y == 15 || x + y == 15);
         }
     }
 }

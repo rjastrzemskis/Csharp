@@ -10,7 +10,7 @@ namespace Exercise5
             dayOff.DisplayDate();
             
             DateTest(dayOff);
-            dayOff.DisplayDate();
+            Console.WriteLine(dayOff.DisplayDate());
             Console.ReadKey();
         }
 

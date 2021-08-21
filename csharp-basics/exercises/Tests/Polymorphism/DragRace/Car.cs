@@ -3,9 +3,9 @@
     interface Car
     {
         string CarName();
-        void SpeedUp();
-        void SlowDown();
+        int SpeedUp();
+        int SlowDown();
         string ShowCurrentSpeed();
-        void StartEngine();
+        string StartEngine();
     }
 }

@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Exercise1
+﻿namespace Exercise1
 {
-    class Product
+    public class Product
     {
         private string _name;
         private int _amount;
@@ -15,24 +13,24 @@ namespace Exercise1
             _amount = amount;
         }
 
-        public void StockInformation()
+        public string StockInformation()
         {
-            Console.WriteLine(_name + ", price " + _price + "$, amount " + _amount);
+            return _name + ", price " + _price + "$, amount " + _amount;
         }
 
-        public void IncreaseAmount(int newAmount)
+        public int IncreaseAmount(int newAmount)
         {
-            _amount+= newAmount;
+           return _amount+= newAmount;
         }
 
-        public void DecreaseAmount(int newAmount)
+        public int DecreaseAmount(int newAmount)
         {
-            _amount-= newAmount;
+            return _amount-= newAmount;
         }
 
-        public void UpdatePrice(decimal newPrice)
-        {
-            _price = newPrice;
+        public decimal UpdatePrice(decimal newPrice)
+        { 
+            return _price = newPrice;
         }
     }
 }

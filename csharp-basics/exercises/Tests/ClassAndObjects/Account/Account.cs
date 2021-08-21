@@ -1,6 +1,6 @@
 ﻿namespace Account
 {
-    class Account
+    public class Account
     {
         private string _name;
         private double _money;
@@ -13,8 +13,7 @@
 
         public double Withdrawal(double i)
         {
-            _money -= i;
-            return i;
+            return _money -= i;
         }
 
         public double Deposit(double i)
@@ -36,6 +35,12 @@
         {
             get => _name;
             set => _name = value;
+        }
+
+        public static double Transfer(Account from, Account to, double howMuch)
+        {
+            from.Withdrawal(howMuch);
+            return to.Deposit(howMuch);
         }
     }
 }

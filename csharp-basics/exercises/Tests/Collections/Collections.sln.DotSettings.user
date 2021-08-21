@@ -1,0 +1,26 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\Rihards-PC\AppData\Local\Temp\JetBrains\ReSharperPlatformVs16\vAny_dbcd048e\CoverageData\_Collections.1244541320\Snapshot\snapshot.utdcvr</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=01127847_002D5456_002D42f4_002D9884_002D3423d170beff/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="GetName_NameJurisNumber28542623_ExpectedJuris" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=302a5530_002Dbc86_002D4e42_002Da79c_002D8858fb681173/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="checkAvailableTrip #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::8CF0E01E-8920-4BD8-964E-C52C6BAED541::.NETFramework,Version=v4.7.2::FlightPlanner.Test.FlightPlannerExtensionTest.checkAvailableTrip&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=31dfa44a_002Ddd2a_002D4f65_002Db236_002D61e52da98bd4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestRoust" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4fcf3b9c_002Dd9b3_002D47ca_002D98a5_002Ddd935ce66261/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="checkAvailableTrip" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::8CF0E01E-8920-4BD8-964E-C52C6BAED541::.NETFramework,Version=v4.7.2::FlightPlanner.Test.FlightPlannerExtensionTest.checkAvailableTrip&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=adc523f9_002D6b8a_002D4fbd_002Dba88_002D69d87cf4f3c7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FlightPlannerExtensionTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;MSTest::8CF0E01E-8920-4BD8-964E-C52C6BAED541::.NETFramework,Version=v4.7.2::FlightPlanner.Test.FlightPlannerExtensionTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	</wpf:ResourceDictionary>

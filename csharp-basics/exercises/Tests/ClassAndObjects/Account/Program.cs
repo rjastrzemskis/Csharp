@@ -33,8 +33,8 @@ namespace Account
             Console.WriteLine(bAccount);
             Console.WriteLine(cAccount);
 
-            Transfer(aAccount,bAccount, 50.0);
-            Transfer(bAccount,cAccount, 25.0);
+            Account.Transfer(aAccount,bAccount, 50.0);
+            Account.Transfer(bAccount,cAccount, 25.0);
             
             Console.WriteLine(aAccount);
             Console.WriteLine(bAccount);
@@ -43,9 +43,6 @@ namespace Account
             Console.ReadKey();
         }
 
-        public static void Transfer(Account from, Account to, double howMuch)
-        {
-            to.Deposit(from.withdrawal(howMuch));
-        }
+
     }
 }

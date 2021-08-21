@@ -2,7 +2,7 @@
 
 namespace Hierarchy
 {
-    class Tiger : Felime
+    public class Tiger : Felime
     {
         public Tiger(string animalName, string animalType, double animalWeight, int foodEaten, string livingRegion)
             : base(animalName, animalType, animalWeight, foodEaten, livingRegion)
@@ -20,7 +20,7 @@ namespace Hierarchy
             if (food.ToString() == "Meat")
                 GetSetFoodEaten += food.GetSetQuantity;
             else
-                Console.WriteLine("> " + GetSetAnimalType + "s are not eating that type of food!");
+                throw new ArgumentException("> " + GetSetAnimalType + "s are not eating that type of food!");
 
             return GetSetFoodEaten;
         }
