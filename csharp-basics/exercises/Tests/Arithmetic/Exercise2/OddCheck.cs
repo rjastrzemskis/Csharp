@@ -2,7 +2,7 @@
 {
     public class OddCheck
     {
-        public static bool isOdd(int number)
+        public static bool IsOdd(int number)
         {
             return number % 2 == 1;
         }
