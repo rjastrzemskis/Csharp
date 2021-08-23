@@ -14,7 +14,7 @@ namespace CalculateArea.Test
             double expected = 113.1;
 
             //Act
-            double result = Geometry.areaOfCircle(radius);
+            double result = Geometry.AreaOfCircle(radius);
 
             //Assert
             Assert.AreEqual(expected, result);
@@ -27,7 +27,7 @@ namespace CalculateArea.Test
             int radius = -6;
 
             //Act
-            Action act = () => Geometry.areaOfCircle(radius);
+            Action act = () => Geometry.AreaOfCircle(radius);
 
             //Assert
             Assert.AreEqual("You entered negative number!", Assert.ThrowsException<ArgumentException>(act).Message);
@@ -41,7 +41,7 @@ namespace CalculateArea.Test
             int width = 5;
 
             //Act
-            double result = Geometry.areaOfRectangle(length, width);
+            double result = Geometry.AreaOfRectangle(length, width);
 
             //Assert
             Assert.AreEqual(35, result);
@@ -55,7 +55,7 @@ namespace CalculateArea.Test
             int width = -5;
 
             //Act
-            Action act = () => Geometry.areaOfRectangle(length, width);
+            Action act = () => Geometry.AreaOfRectangle(length, width);
 
             //Assert
             Assert.AreEqual("You entered negative number!", Assert.ThrowsException<ArgumentException>(act).Message);
@@ -69,7 +69,7 @@ namespace CalculateArea.Test
             int h = 2;
 
             //Act
-            double result = Geometry.areaOfTriangle(ground, h);
+            double result = Geometry.AreaOfTriangle(ground, h);
 
             //Assert
             Assert.AreEqual(6, result);
@@ -83,7 +83,7 @@ namespace CalculateArea.Test
             int width = -22;
 
             //Act
-            Action act = () => Geometry.areaOfRectangle(legth, legth);
+            Action act = () => Geometry.AreaOfRectangle(legth, legth);
 
             //Assert
             Assert.AreEqual("You entered negative number!", Assert.ThrowsException<ArgumentException>(act).Message);
