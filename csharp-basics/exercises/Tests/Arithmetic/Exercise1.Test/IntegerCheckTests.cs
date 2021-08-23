@@ -10,9 +10,8 @@ namespace Exercise1.Test
         [DataRow(0, 15, true)]
         [DataRow(15, 15, true)]
         [DataRow(7, 8, true)]
-        [DataRow(7, 22, true)]
-        [DataRow(4, 7, false)]
-        public void CheckIfNumberSumDifferenceOrSumIs15(int x, int y, bool expected)
+        [DataRow(22, 7, true)]
+        public void NumberSumDifferenceOrSumIs15_Numbers_ExpectedTrue(int x, int y, bool expected)
         {
             // Act
             bool result = IntegerCheck.Numbers(x, y);
