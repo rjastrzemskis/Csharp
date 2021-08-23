@@ -13,17 +13,17 @@ namespace CalculateArea
 
                 if (choice == 1)
                 {
-                    calculateCircleArea();
+                    CalculateCircleArea();
                     Console.ReadKey();
                 }
                 else if (choice == 2)
                 {
-                    calculateRectangleArea();
+                    CalculateRectangleArea();
                     Console.ReadKey();
                 }
                 else if (choice == 3)
                 {
-                    calculateTriangleArea();
+                    CalculateTriangleArea();
                     Console.ReadKey();
                 }
                 else if (choice == 4)
@@ -57,17 +57,17 @@ namespace CalculateArea
             return userChoice;
         }
 
-        public static void calculateCircleArea()
+        public static void CalculateCircleArea()
         {
             Console.WriteLine("\nWhat is the circle's radius? ");
             var keyboard = Console.ReadLine();
             decimal.TryParse(keyboard, out var radius);
 
             Console.WriteLine("The circle's area is "
-                    + Geometry.areaOfCircle(radius));
+                    + Geometry.AreaOfCircle(radius));
         }
 
-        public static void calculateRectangleArea()
+        public static void CalculateRectangleArea()
         {
             decimal length = 0;
             decimal width = 0;
@@ -81,10 +81,10 @@ namespace CalculateArea
             decimal.TryParse(keyboard, out width);
 
             Console.WriteLine("The rectangle's area is "
-                    + Geometry.areaOfTriangle(length, width));
+                    + Geometry.AreaOfTriangle(length, width));
         }
 
-        public static void calculateTriangleArea()
+        public static void CalculateTriangleArea()
         {
             decimal ground = 0;
             decimal height = 0;
@@ -98,7 +98,7 @@ namespace CalculateArea
             decimal.TryParse(keyboard, out height);
 
             Console.WriteLine("The triangle's area is "
-                    + Geometry.areaOfRectangle(ground, height));
+                    + Geometry.AreaOfRectangle(ground, height));
         }
     }
 }
