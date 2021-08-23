@@ -15,19 +15,19 @@ namespace Exercise5
             _myYear = year;
         }
 
-        public int setDay(int day)
+        public int SetDay(int day)
         {
             _myDay = day;
             return _myDay;
         }
 
-        public int setMonth(int month)
+        public int SetMonth(int month)
         {
             _myMonth = month;
             return _myMonth;
         }
 
-        public int setYear(int year)
+        public int SetYear(int year)
         {
             _myYear = year;
             return _myYear;
