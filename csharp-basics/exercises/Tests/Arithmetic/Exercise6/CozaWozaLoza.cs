@@ -18,6 +18,7 @@
                 else if (number % 7 == 0)
                     getAllWords += "Woza ";
                 else getAllWords += number + " ";
+                
                 if (number % 11 == 0)
                     getAllWords += "\n";
             }
