@@ -2,7 +2,7 @@
 
 namespace Exercise5
 {
-    class Date
+    public class Date
     {
         private int _myDay;
         private int _myMonth;
@@ -33,9 +33,9 @@ namespace Exercise5
             return _myYear;
         }
 
-        public void DisplayDate()
+        public string DisplayDate()
         {
-            Console.WriteLine("Day off in " + _myDay + "/" + _myMonth + "/" + _myYear);
+            return "Day off in " + _myDay + "/" + _myMonth + "/" + _myYear;
         }
     }
 }

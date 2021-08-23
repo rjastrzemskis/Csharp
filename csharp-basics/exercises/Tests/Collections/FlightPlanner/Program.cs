@@ -31,50 +31,23 @@ namespace FlightPlanner
                         Console.WriteLine(string.Join("\n", flightsAvailable));
                         break;
                     case '2':
-                        List<string> citiesBeen = new List<string>();
-                        string sanJose = "San Jose", newYork = "New York", anchorage = "Anchorage", honolulu = "Honolulu",
-                                denver = "Denver", sanFrancisco = "San Francisco";
-
-                        Console.WriteLine("From which city would you like to start? San Jose, New York, Anchorage, Honolulu, Denver, San Francisco");
-                        string city = Console.ReadLine();
-
                         bool flying = true;
                         int flyingTimes = 0;
+                        List<string> citiesBeen = new List<string>();
+                        Console.WriteLine("From which city would you like to start? San Jose, New York, Anchorage, Honolulu, Denver, San Francisco");
+                        string city = Console.ReadLine();
+                        citiesBeen.Add(city);
                         while (flying)
                         {
-                            if (city == sanJose)
-                                Console.WriteLine("You can fly from " + city + " to " + sanFrancisco + " or " + anchorage);
-                            else if (city == newYork)
-                                Console.WriteLine("You can fly from " + city + " to " + anchorage + ", " + sanJose + ", " + sanFrancisco + ", " + honolulu);
-                            else if (city == anchorage)
-                                Console.WriteLine("You can fly from " + city + " to " + newYork + " or " + sanJose);
-                            else if (city == honolulu)
-                                Console.WriteLine("You can fly from " + city + " to " + newYork + " or " + sanFrancisco);
-                            else if (city == denver)
-                                Console.WriteLine("You can fly from " + city + " to " + sanJose);
-                            else if (city == sanFrancisco)
-                                Console.WriteLine("You can fly from " + city + " to " + newYork + ", " + honolulu + ", " + denver);
-                            else Console.WriteLine("There is no trip to this city! Try again!");
-
-                            citiesBeen.Add(city);
+                            Console.WriteLine(FligthPlannerExtension.flighthTripAround(city, citiesBeen));
                             Console.Write("Where will you fly next? ");
                             city = Console.ReadLine();
-
-                            while (!flightsAvailable.Contains(citiesBeen[flyingTimes] + " -> " + city))
-                            {
-                                Console.WriteLine("There is no trip from " + citiesBeen[flyingTimes] + " to " + city);
-                                Console.Write("Enter again destination : ");
-                                city = Console.ReadLine();
-                            }
+                            FligthPlannerExtension.checkAvailableTrip(city, flyingTimes, flightsAvailable, citiesBeen);
+                            flying = FligthPlannerExtension.RoundTrip(city, citiesBeen);
                             flyingTimes++;
-
-                            if (citiesBeen[0] == city)
-                            {
-                                citiesBeen.Add(city);
-                                Console.WriteLine("Your route was " + string.Join(" -> ", citiesBeen));
-                                flying = false;
-                            }
                         }
+
+                        Console.WriteLine("Your route was " + string.Join(" -> ", citiesBeen));
                         break;
                     default:
                         Console.WriteLine("Wrong character. Try again!");

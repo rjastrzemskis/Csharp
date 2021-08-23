@@ -2,7 +2,7 @@
 
 namespace Hierarchy
 {
-    class Cat : Felime
+    public class Cat : Felime
     {
         private string _breed;
 
@@ -27,8 +27,6 @@ namespace Hierarchy
         {
             if (food.ToString() == "Meat" || food.ToString() == "Vegetable")
                 GetSetFoodEaten += food.GetSetQuantity;
-            else
-                Console.WriteLine("> " + GetSetAnimalType + "s are not eating that type of food!");
 
             return GetSetFoodEaten;
         }

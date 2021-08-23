@@ -11,14 +11,7 @@ namespace Exercise6
             int[] myArray = new int[10];
             int[] copyArray = new int[10];
 
-            Random randNum = new Random();
-            for (int i = 0; i < myArray.Length; i++)
-            {
-                myArray[i] = randNum.Next(min, max);
-                copyArray[i] = myArray[i];
-            }
-
-            myArray[myArray.Length-1] = -7;
+            ArrayExtensions.ChangeArrayLastNumber(min, max, myArray, copyArray);
 
             Console.WriteLine(string.Join(" ", myArray));
             Console.WriteLine(string.Join(" ", copyArray));

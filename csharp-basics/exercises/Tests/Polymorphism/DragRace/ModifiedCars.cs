@@ -2,6 +2,6 @@
 {
     interface ModifiedCars
     {
-        void UseNitrousOxideEngine();
+        int UseNitrousOxideEngine();
     }
 }
