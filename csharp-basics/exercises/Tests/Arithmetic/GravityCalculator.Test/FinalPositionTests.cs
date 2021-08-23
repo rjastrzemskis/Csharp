@@ -6,7 +6,7 @@ namespace GravityCalculator.Test
     public class FinalPositionTests
     {
         [TestMethod]
-        public void CheckFinalPosition_fallingTime10Velocity0Position0_Expected490_5()
+        public void CheckFinalPosition_FallingTime10Velocity0Position0_Expected490_5()
         {
             // Arrange
             double fallingTime = 10.0;
