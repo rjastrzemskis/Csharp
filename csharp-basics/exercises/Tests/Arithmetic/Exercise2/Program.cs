@@ -8,7 +8,7 @@ namespace Exercise2
         {
             Console.WriteLine("Enter any number: ");
             int x = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(OddCheck.isOdd(x));
+            Console.WriteLine(OddCheck.IsOdd(x));
             Console.ReadKey();
         }
     }
