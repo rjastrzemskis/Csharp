@@ -11,10 +11,10 @@ namespace Exercise2.Test
         [DataRow(1, true)]
         [DataRow(2, false)]
         [DataRow(3, true)]
-        public void CheckIfNumberIsOddOrNo(int x, bool expected)
+        public void NumberIsOddOrNo_Numbers_ExpectedTrueorFalse(int x, bool expected)
         {
             // Act
-            bool result = OddCheck.isOdd(x);
+            bool result = OddCheck.IsOdd(x);
 
             //Assert
             Assert.AreEqual(expected, result);
