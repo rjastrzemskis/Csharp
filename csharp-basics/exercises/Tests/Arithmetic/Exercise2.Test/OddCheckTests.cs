@@ -11,7 +11,6 @@ namespace Exercise2.Test
         [DataRow(1, true)]
         [DataRow(2, false)]
         [DataRow(3, true)]
-
         public void CheckIfNumberIsOddOrNo(int x, bool expected)
         {
             // Act
